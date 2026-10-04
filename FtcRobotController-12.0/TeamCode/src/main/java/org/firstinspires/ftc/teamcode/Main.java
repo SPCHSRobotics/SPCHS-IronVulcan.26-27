@@ -15,6 +15,9 @@ public class Main extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
 
+    
+    //Wonderfull day we're having
+
     @Override
     public void runOpMode() {
         // Wait for the game to start (driver presses PLAY)
