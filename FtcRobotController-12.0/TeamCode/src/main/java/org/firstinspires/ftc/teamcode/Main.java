@@ -7,7 +7,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 
 import org.firstinspires.ftc.teamcode.HardwareMapping.RobotHardware; //Import Hardware
-import org.firstinspires.ftc.teamcode.Controls.InputControls; //Import Hardware
+import org.firstinspires.ftc.teamcode.Controls.InputControls; //Import Controls
+import org.firstinspires.ftc.teamcode.Modules.Mechanum_Drive; //Import Driving module
 
 
 @TeleOp(name="Main", group="Linear OpMode")
@@ -25,6 +26,8 @@ public class Main extends LinearOpMode {
 
         //Load out input bindings
         InputControls InputControlObject = new InputControls(telemetry);
+        //Load modules
+        Mechanum_Drive DrivingObject = new Mechanum_Drive();
 
         //Telemetry business
         telemetry.update();
@@ -38,6 +41,8 @@ public class Main extends LinearOpMode {
         while (opModeIsActive()) {
             // Call our functions here
             InputControlObject.Update(gamepad1, telemetry);
+            DrivingObject.POV_Driving(InputControlObject.Driving, RobotHardwareObject.Wheels, telemetry);
+
         }
 
     }

@@ -22,5 +22,8 @@ public class InputControls {
         Driving[0][0] = gamepad1.left_stick_x;
         Driving[0][1] = -gamepad1.left_stick_y;
         Driving[1][0] = gamepad1.right_stick_x;
+        telemetry.addData("Left Stick x: ", Driving[0][0]);
+        telemetry.addData("Left Stick Y: ", Driving[0][1]);
+        telemetry.addData("Right Stick X: ", Driving[1][0]);
     }
 }
