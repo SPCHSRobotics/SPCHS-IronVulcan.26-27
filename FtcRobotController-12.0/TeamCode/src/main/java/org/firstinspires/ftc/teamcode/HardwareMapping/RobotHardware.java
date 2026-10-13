@@ -9,6 +9,10 @@ public class RobotHardware {
     //Each object of the class RobotHardware shall have the following variables:
     public DcMotor[] Wheels = new DcMotor[4];
 
+    //Hi Atlas. Here I create a variable for intake:
+    public DcMotor Intake;
+    //It's public so that other files can access it, and it's of the type DcMotor
+
     public RobotHardware(HardwareMap hardwareMap){
         /*
         Each object of the class RobotHardware shall take a HardwareMap object at declaration,
@@ -29,5 +33,13 @@ public class RobotHardware {
         Wheels[2].setDirection(DcMotorSimple.Direction.FORWARD);
         Wheels[3].setDirection(DcMotorSimple.Direction.FORWARD);
 
+
+        /*Hi Atlas. Here I assign that intake variable I created to an arbitrary name
+         *that I'll assign on the driver station. Notice the first Wheels[] block above?
+         *(the one where the first is "Wheels[0] = hardwareMap.get(DcMotor.class, "rightFront")'"
+         * well we're going to do the same exact thing here so that the variable is associated
+         * with an actual hardware component:
+         */
+        Intake = hardwareMap.get(DcMotor.class, "intakeMotor");
     }
 }
