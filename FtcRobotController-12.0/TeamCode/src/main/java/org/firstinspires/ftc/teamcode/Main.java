@@ -48,9 +48,8 @@ public class Main extends LinearOpMode {
              *happen in this curly brace section in order for the code to work.
              *It should be around 1 line long...
              */
-
-
-        }
+            //it was one line long meoww
+            IntakeObject.PowerIntake(RobotHardwareObject, gamepad1);        }
 
     }
 }

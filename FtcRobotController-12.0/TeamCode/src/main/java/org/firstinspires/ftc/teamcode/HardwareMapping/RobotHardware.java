@@ -9,7 +9,8 @@ public class RobotHardware {
     //Each object of the class RobotHardware shall have the following variables:
     public DcMotor[] Wheels = new DcMotor[4];
 
-    //Hi Atlas. Here I create a variable for intake:
+    //Hi Atlas. Here I create a variable for intake
+    // Atlas: thanks Gleb
     public DcMotor Intake;
     //It's public so that other files can access it, and it's of the type DcMotor
 

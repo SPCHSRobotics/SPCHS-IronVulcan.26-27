@@ -4,11 +4,16 @@ package org.firstinspires.ftc.teamcode.Modules;
 //this file.
 import org.firstinspires.ftc.teamcode.HardwareMapping.RobotHardware;
 
+import com.qualcomm.robotcore.hardware.Gamepad;
+
 public class Intake {
-    //Here we need to define a function for the main file to execute:
-    public void PowerIntake(){
-        //And here we actually write the logic that should power the intake.
 
-
+    public void PowerIntake(RobotHardware robot, Gamepad gamepad) {
+        if (gamepad.a) {
+            robot.Intake.setPower(1.0);
+        } else {
+            robot.Intake.setPower(0.0);
+        }
     }
 }
+//lets go i did it lets go meeow
