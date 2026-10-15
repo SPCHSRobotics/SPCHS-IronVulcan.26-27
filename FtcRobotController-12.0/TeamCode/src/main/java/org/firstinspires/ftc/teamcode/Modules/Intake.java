@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 public class Intake {
 
     public void PowerIntake(RobotHardware robot, Gamepad gamepad) {
-        if (gamepad.a) {
+        if (gamepad.aWasPressed()) {
             robot.Intake.setPower(1.0);
         } else {
             robot.Intake.setPower(0.0);
