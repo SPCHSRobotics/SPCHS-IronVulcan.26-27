@@ -17,39 +17,30 @@ public class Main extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
 
-    
-    //Wonderfull day we're having
-
+    // Wait for the game to start (driver presses INIT)
     @Override
     public void runOpMode() {
-        // Wait for the game to start (driver presses PLAY)
         telemetry.addData("Status", "Initialized");
 
-        //Load out input bindings
-        InputControls InputControlObject = new InputControls(telemetry);
-        //Load modules
+        InputControls InputControlObject = new InputControls(telemetry); //Load out input bindings
+        RobotHardware RobotHardwareObject = new RobotHardware(hardwareMap); //Initialize Hardware as an object
+        //Load modules:
         Mechanum_Drive DrivingObject = new Mechanum_Drive();
         Intake IntakeObject = new Intake();
 
-        //Telemetry business
-        telemetry.update();
-        waitForStart();
+        telemetry.update(); //Print all above generated telemetry to screen
+
+        waitForStart(); //Driver presses PLAY
         runtime.reset();
 
-        //Initialize Hardware as an object
-        RobotHardware RobotHardwareObject = new RobotHardware(hardwareMap);
 
         // Run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
-            // Call our functions here
             InputControlObject.Update(gamepad1, telemetry);
             DrivingObject.POV_Driving(InputControlObject.Driving, RobotHardwareObject.Wheels, telemetry);
-            /*Hi Atlas. Based on what you've seen and wrote so far, something needs to
-             *happen in this curly brace section in order for the code to work.
-             *It should be around 1 line long...
-             */
-            //it was one line long meoww
-            IntakeObject.PowerIntake(RobotHardwareObject, gamepad1);        }
+            IntakeObject.PowerIntake(RobotHardwareObject.Intake, gamepad1);
 
+            telemetry.update();
+        }
     }
 }

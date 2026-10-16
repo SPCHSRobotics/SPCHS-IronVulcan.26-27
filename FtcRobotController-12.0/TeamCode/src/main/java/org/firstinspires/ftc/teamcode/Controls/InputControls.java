@@ -1,16 +1,16 @@
 package org.firstinspires.ftc.teamcode.Controls;
-import com.qualcomm.robotcore.hardware.Gamepad;
 
+import com.qualcomm.robotcore.hardware.Gamepad;
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 
 public class InputControls {
-    public InputControls(Telemetry telemetry){
+    public InputControls(Telemetry telemetry){ //Run when initialized:
         telemetry.addLine(
                 "\nDrive using the LEFT STICK\n" +
-                        "Rotate using the RIGHT STICK\n"
+                        "Rotate using the RIGHT STICK\n" +
+                        "Toggle intake with A\n"
         );
     }
-    //God forbid a man tries to use a hashmap
     public float[][] Driving = new float[2][2];
     /*
     0 0 | Lateral   | Pitch
