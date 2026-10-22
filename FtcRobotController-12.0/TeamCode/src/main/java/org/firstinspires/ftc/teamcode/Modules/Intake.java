@@ -1,19 +1,17 @@
 package org.firstinspires.ftc.teamcode.Modules;
 
-//Hi Atlas. Here I import the hardware map so that you can access that intake variable in
-//this file.
-import org.firstinspires.ftc.teamcode.HardwareMapping.RobotHardware;
-
+import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Gamepad;
 
 public class Intake {
+    private boolean IntakeOn = false;
 
-    public void PowerIntake(RobotHardware robot, Gamepad gamepad) {
-        if (gamepad.aWasPressed()) {
-            robot.Intake.setPower(1.0);
-        } else {
-            robot.Intake.setPower(0.0);
+    public void PowerIntake(DcMotor Intake, Gamepad gamepad) {
+        if (gamepad.aWasPressed()){
+            IntakeOn = !IntakeOn; //Change the intake from [true to false] or from [false to true]
         }
+
+        if (IntakeOn)   {Intake.setPower(1.0);} //This is just a cleaner way to write a two-result
+        else            {Intake.setPower(0.0);} //if-else statement in my opinion.
     }
 }
-//lets go i did it lets go meeow
