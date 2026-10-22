@@ -10,6 +10,7 @@ import org.firstinspires.ftc.teamcode.HardwareMapping.RobotHardware; //Import Ha
 import org.firstinspires.ftc.teamcode.Controls.InputControls; //Import Controls
 import org.firstinspires.ftc.teamcode.Modules.Mechanum_Drive; //Import Driving module
 import org.firstinspires.ftc.teamcode.Modules.Intake; //Import intake module
+import org.firstinspires.ftc.teamcode.Modules.Shooter;
 
 
 @TeleOp(name="Main", group="Linear OpMode")
@@ -30,6 +31,7 @@ public class Main extends LinearOpMode {
         //Load modules
         Mechanum_Drive DrivingObject = new Mechanum_Drive();
         Intake IntakeObject = new Intake();
+        Shooter ShooterObject = new Shooter();
 
         //Telemetry business
         telemetry.update();
@@ -49,7 +51,9 @@ public class Main extends LinearOpMode {
              *It should be around 1 line long...
              */
             //it was one line long meoww
-            IntakeObject.PowerIntake(RobotHardwareObject, gamepad1);        }
+            IntakeObject.PowerIntake(RobotHardwareObject, gamepad1);
+            ShooterObject.PowerShooter();
+        }
 
     }
 }
