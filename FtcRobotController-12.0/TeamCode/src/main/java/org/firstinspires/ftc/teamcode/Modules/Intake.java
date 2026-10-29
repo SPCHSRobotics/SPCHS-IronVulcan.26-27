@@ -14,8 +14,11 @@ public class Intake {
         if (IntakeOn) {
             Intake.setPower(1.0);
         }
-        else {
+        else if (!IntakeOn){
             Intake.setPower(0.0);
+        } else {
+            //Creates an error and halts script execution unless this error is addressed.
+            throw new IllegalArgumentException("Intake neither on or off");
         }
     }
 }
