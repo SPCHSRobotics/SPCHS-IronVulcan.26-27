@@ -11,8 +11,11 @@ public class Intake {
             IntakeOn = !IntakeOn; //Change the intake from [true to false] or from [false to true]
         }
 
-        if (IntakeOn) {Intake.setPower(1.0);} else if (!IntakeOn){Intake.setPower(0.0);};
+        if (IntakeOn) {Intake.setPower(1.0);} else if (!IntakeOn){Intake.setPower(0.0);}
         //This comment belong in the terrible intake branch
-        }
+        
+        if (true){ int number = 1;}
+
+        //This code sucks.
     }
 }
