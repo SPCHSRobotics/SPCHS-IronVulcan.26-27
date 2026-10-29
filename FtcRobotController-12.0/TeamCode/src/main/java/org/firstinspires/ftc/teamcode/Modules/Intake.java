@@ -12,6 +12,7 @@ public class Intake {
         }
 
         if (IntakeOn) {Intake.setPower(1.0);} else if (!IntakeOn){Intake.setPower(0.0);};
+        //This comment belong in the terrible intake branch
         }
     }
 }
