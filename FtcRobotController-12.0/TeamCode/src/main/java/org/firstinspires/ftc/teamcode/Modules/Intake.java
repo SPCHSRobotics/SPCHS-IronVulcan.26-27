@@ -11,6 +11,8 @@ public class Intake {
             IntakeOn = !IntakeOn; //Change the intake from [true to false] or from [false to true]
         }
 
+        //This comment serves no logical purpose
+        //But it may help with git understanding
         if (IntakeOn) {
             Intake.setPower(1.0);
         }
