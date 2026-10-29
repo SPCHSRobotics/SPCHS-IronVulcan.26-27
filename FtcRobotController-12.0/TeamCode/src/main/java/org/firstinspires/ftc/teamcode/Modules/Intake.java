@@ -22,5 +22,7 @@ public class Intake {
             //Creates an error and halts script execution unless this error is addressed.
             throw new IllegalArgumentException("Intake neither on or off");
         }
+
+        //This code sucks.
     }
 }
