@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class Shooter {
     private final DcMotor shootBall = hardwareMap.get(DcMotor.class, "ShootBall");
 
-    public void PowerShooter() {
+    public void Power_Shooter() {
         //shooting ball when right trigger pressed
         float triggerValue = gamepad1.right_trigger;
         shootBall.setPower(triggerValue);

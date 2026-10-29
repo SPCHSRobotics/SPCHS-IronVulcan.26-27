@@ -46,13 +46,10 @@ public class Main extends LinearOpMode {
             // Call our functions here
             InputControlObject.Update(gamepad1, telemetry);
             DrivingObject.POV_Driving(InputControlObject.Driving, RobotHardwareObject.Wheels, telemetry);
-            /*Hi Atlas. Based on what you've seen and wrote so far, something needs to
-             *happen in this curly brace section in order for the code to work.
-             *It should be around 1 line long...
-             */
-            //it was one line long meoww
-            IntakeObject.PowerIntake(RobotHardwareObject, gamepad1);
-            ShooterObject.PowerShooter();
+
+            IntakeObject.Power_Intake(RobotHardwareObject, gamepad1); //Privellage creep
+
+            ShooterObject.Power_Shooter();
         }
 
     }

@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 public class Intake {
     private boolean IntakeOn = false;
 
-    public void PowerIntake(DcMotor Intake, Gamepad gamepad) {
+    public void Power_Intake(DcMotor Intake, Gamepad gamepad) {
         if (gamepad.aWasPressed()){
             IntakeOn = !IntakeOn; //Change the intake from [true to false] or from [false to true]
         }
