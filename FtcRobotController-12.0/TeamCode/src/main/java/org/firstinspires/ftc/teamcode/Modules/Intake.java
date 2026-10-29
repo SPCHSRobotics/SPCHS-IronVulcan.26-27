@@ -11,11 +11,7 @@ public class Intake {
             IntakeOn = !IntakeOn; //Change the intake from [true to false] or from [false to true]
         }
 
-        if (IntakeOn) {
-            Intake.setPower(1.0);
-        }
-        else {
-            Intake.setPower(0.0);
-        }
+        if (IntakeOn)   {Intake.setPower(1.0);}
+        else            {Intake.setPower(0.0);}
     }
 }
