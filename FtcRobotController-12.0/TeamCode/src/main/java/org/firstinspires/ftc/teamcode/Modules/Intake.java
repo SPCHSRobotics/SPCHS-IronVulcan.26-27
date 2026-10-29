@@ -13,5 +13,8 @@ public class Intake {
 
         if (IntakeOn)   {Intake.setPower(1.0);}
         else            {Intake.setPower(0.0);}
+
+        //This comment serves no logical purpose
+        //But it may help with git understanding
     }
 }
